@@ -55,6 +55,8 @@ const caesarModule = (function () {
     if (!shift | (shift === 0) | (shift < -25) | (shift > 25)) {
       return false;
     }
+    //everything below is to encode 
+    if(encode = true) {
     // create a loop to loop through the array of letters
     for (let i = 0; i < arr.length; i++) {
       for (let j = 0; j < input.length; i++) {
@@ -62,10 +64,17 @@ const caesarModule = (function () {
         if (input[j] === arr[i]) {
           //within if statement stating to shift over the letter
           input[j] = arr[shift]
-          //dont forget about the requirement to return to the beginning of the array if it goes past z.
-          
+          //dont forget about the requirement to return to the beginning of the array
+          // if it goes past z.
+
+        }
         }
       }
+    }
+    //everything below this is if encode is false 
+    if(encode === false) {
+      // code goes here 
+      
     }
   }
   //
