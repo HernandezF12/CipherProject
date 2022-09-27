@@ -61,7 +61,9 @@ const caesarModule = (function () {
         //if statement to identify which letter it is
         if (input[j] === arr[i]) {
           //within if statement stating to shift over the letter
+          input[j] = arr[shift]
           //dont forget about the requirement to return to the beginning of the array if it goes past z.
+          
         }
       }
     }
