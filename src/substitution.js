@@ -6,7 +6,8 @@
 const substitutionModule = (function () {
   // you can add any code you want within this function scope
 
-  
+  //add the substitution alphabet given from qualified
+
   function substitution(input, alphabet, encode = true) {
     // your solution code here
   }
