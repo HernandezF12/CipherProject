@@ -99,8 +99,8 @@ const polybius = (function () {
         //loop through the encode array
        
         }
-        }
-      }
+        
+      
     }
 
     //Decoding after this line
