@@ -7,34 +7,10 @@ const caesarModule = (function () {
   // you can add any code you want within this function scope
 
   //create an array alphabet which will have all the alphabets in it
-  const arr = {
-    a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    h,
-    i,
-    j,
-    k,
-    l,
-    m,
-    n,
-    o,
-    p,
-    q,
-    r,
-    s,
-    t,
-    u,
-    v,
-    w,
-    x,
-    y,
-    z,
-  };
+  const alphabet = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+
+  // create the encdoed message variable to return after encoding 
+  const encodedMessage = [];
 
   /*
    If the shift value isn't present, equal to 0, less than -25,
@@ -49,34 +25,31 @@ const caesarModule = (function () {
 */
   function caesar(input, shift, encode = true) {
     // your solution code here
-    if ((encode = false)) {
-      return input;
-    }
+
+    // turn the input into lowerCase according to requirements
+    const lowercaseInput = input.toLowerCase();
+
     if (!shift | (shift === 0) | (shift < -25) | (shift > 25)) {
       return false;
     }
     //everything below is to encode 
     if(encode = true) {
     // create a loop to loop through the array of letters
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < input.length; i++) {
+    for (let i = 0; i < alphabet.length; i++) {
+      for (let j = 0; j < lowercaseInput.length; i++) {
         //if statement to identify which letter it is
-        if (input[j] === arr[i]) {
-          //within if statement stating to shift over the letter
-          input[j] = arr[shift]
-          //dont forget about the requirement to return to the beginning of the array
-          // if it goes past z.
+        if (lowercaseInput[j] === alphabet[i]) {
+         // need another if statemenet to ensure that it doesnt
+         // go past z in the array 
+         //if(inputcharacterindexnumber+ shift > 25) {
+
+         }
 
         }
         }
       }
     }
-    //everything below this is if encode is false 
-    if(encode === false) {
-      // code goes here 
-      
-    }
-  }
+    // return encoded message and add spaces inbetween with join(" ")
   //
 
   return {

@@ -6,8 +6,6 @@
 const polybius = (function () {
   //you can add any code you want within this function scope
 
-  // try making two objects
-  // example Lets say variable = {a:11,b:21,c:31..............} till z:55
   const cipher = {
     a: 11,
     b: 21,
@@ -39,7 +37,6 @@ const polybius = (function () {
   };
 
   // the other will be for decipher
-  //const decipher = { 11: "a",21: "b",31: "c",41: "d",51: "e",12: "f",22: "g",32: "h",42: "(i/j)" }
   const decipher = {
     11: "a",
     21: "b",
@@ -85,29 +82,29 @@ const polybius = (function () {
   should somehow be shown.
 */
   function polybius(input, encode = true) {
-    // your solution code here
+    // when DECODING check if input is even if not return false
+    if(encode === false) {
+      if (input.split(" ").length % 2 == 0) {
+        return false;
+      }
+    // create encode variable to push the return 
+    const encodedMessage = [];
+    // turn the input into lowercase
+    const lowerCaseInput = encode.toLowerCase();
     //below this line will be encoding
     if(encode === true){
       //write code for encoding 
       //loop through each character in the input 
       for(let i = 0; i < input.length; i++) {
         //loop through the encode array
-        for(let j = 0; j < encode.length; j++) {
-        // if statement to check if input character 
-        //equals the encoding array
-        if(input[i] === encode[j]){
-          input[i] = encode[i]
+       
         }
         }
       }
     }
 
     //Decoding after this line
-    // when DECODING check if input is even if not return false
-    if(encode === false) {
-    if (input.split(" ").length % 2 == 0) {
-      return false;
-    }
+    
     //write code for decoding
 
   }
