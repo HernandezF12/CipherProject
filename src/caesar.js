@@ -32,8 +32,12 @@ const caesarModule = (function () {
     if (!shift | (shift === 0) | (shift < -25) | (shift > 25)) {
       return false;
     }
-    //everything below is to encode 
-    if(encode = true) {
+    // start with the value of shift 
+    if(encode = false) {
+      shift = shift * (-1);
+    }
+    // begin to decipher 
+    le
     // create a loop to loop through the array of letters
     for (let i = 0; i < alphabet.length; i++) {
       for (let j = 0; j < lowercaseInput.length; i++) {
